@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  todo-app:
+    build:
+      context: .
+    container_name: flask_todo_app
+    command: python /app/app.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app 
+    

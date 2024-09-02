@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  todo-app:
+    build:
+      context: .
+    container_name: todo_app
+    command: node /app/src/app.js
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src:/app/src
